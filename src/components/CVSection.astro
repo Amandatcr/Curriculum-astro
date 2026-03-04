@@ -1,0 +1,15 @@
+---
+import TitleSection from './TitleSection.astro';
+interface Props {
+    titulo: string;
+    items: string[];
+}
+const { titulo, items } = Astro.props;
+---
+
+<section>
+    <TitleSection titulo = {titulo.toUpperCase()}/>
+    <ul class=" list-disc pl-5" >
+        {items.map((item) => <li>{item}</li>)}
+    </ul>
+</section>

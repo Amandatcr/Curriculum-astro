@@ -1,0 +1,30 @@
+---
+import Contacto from "./Contacto.astro";
+import TitleSection from "./TitleSection.astro";
+
+
+const contactos = [
+    {
+        telefono : "667030022",
+        email :"amandacruzrobalino@gmail.com",
+        linkedin:"https://www.linkedin.com/in/amanda-cruz-robalino-938566b5/",
+        github:"",
+        direccion : "Madrid - España"
+    }
+]
+
+---
+<section>
+    <TitleSection titulo="Contacto" />
+    {contactos.map(contactos=>(
+        <Contacto
+            telefono={contactos.telefono}
+            email={contactos.email}
+            direccion={contactos.direccion}
+            linkedin={contactos.linkedin}
+            github = {contactos.github}
+        />
+    ))}
+
+</section>
+

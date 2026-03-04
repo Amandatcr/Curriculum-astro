@@ -1,0 +1,48 @@
+---
+import ExperienciaLaboral from "./ExperienciaLaboral.astro";
+import TitleSection from "./TitleSection.astro";
+
+const experiencia = [
+    {
+        puesto: "RESPONSABLE DE ADMINISTRACIÓN Y CONTABILIDAD",
+        empresa: "NewPoint IT Consulting, SL.",
+        duracion: "(2012-2024)",
+        tareas: [
+            "Verificación, asignación y contabilización de transacciones en libros ysistemas informáticos.",
+            "Gestión de cuentas por cobrar y por pagar, seguimiento devencimientos.",
+            "Conciliación bancaria y control de saldos en cuentas corrientes.",
+            "Gestión de créditos y financiamiento, negociación con entidadesbancarias.",
+            "Preparación y presentación de informes de gestión y resultados a ladirección.",
+            "Coordinación de cierres contables mensuales y anuales.",
+            "Gestión de nóminas, liquidación de sueldos y cargas sociales."
+        ],
+    },
+        {
+        puesto: "AUXILIAR ADMINISTRATIVO,",
+        empresa: "Capelo & Gaspa, CB.",
+        duracion: "(2009-2012)",
+        tareas: [
+            "Atención a las consultas de clientes a través de las diferentes herramientas de comunicación..",
+            "Redacción de correos, correspondencia y comunicaciones exteriores.",
+            "Recepción y registro de facturas y documentación contable.",
+            "Registro de información y actualización del archivo.",
+            "Organización de documentos físicos y digitales para su fácil acceso yactualización.",
+            "Participación en reuniones y visitas a clientes cuando sea necesario.",
+            "Gestión de contratos, nóminas y seguros sociales de empleados."
+        ],
+    },
+];
+---
+<section>
+ <TitleSection titulo = "Historial Laboral"/>
+    {experiencia.map((exp)=>(
+        <ExperienciaLaboral
+            puesto={exp.puesto}
+            empresa={exp.empresa}
+            duracion={exp.duracion}
+            tareas={exp.tareas}
+        />
+    ))}
+
+</section>
+

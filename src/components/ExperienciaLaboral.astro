@@ -1,0 +1,19 @@
+---
+interface Props {
+    puesto: string;
+    empresa: string;
+    duracion: string;
+    tareas: string[];
+}
+const { puesto, empresa, duracion, tareas } = Astro.props;
+---
+
+<article class="mb-5">
+    <h3 class="font-bold">{puesto}</h3>
+    <p>{empresa}</p>
+    <p>{duracion} </p>
+
+    <ul class="list-disc pl-5">
+        {tareas.map((tarea) => <li >{tarea}</li>)}
+    </ul>
+</article>
