@@ -1,169 +1,40 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import "../../styles/curriculum.css";
+import HeaderResumen from "../../components/HeaderResumen.astro";
+import Estudios from "../../components/Estudios.astro";
+import ExperienciasLaborales from "../../components/ExperienciasLaborales.astro";
+import Contactos from "../../components/Contactos.astro";
+import CVSection from "../../components/CVSection.astro";
+import {
+    conocimientosTecnicos,
+    actitudes,
+    masInformacion,
+} from "../../data/CVData";
 ---
 
 <Layout title="Curriculum Amanda Cruz">
-    <div class="cv">
-        <main class="cv__main">
-            <header>
-                <h1>AMANDA CRUZ ROBALINO</h1>
-                <h2>RESUMEN PROFESIONAL</h2>
-                <p>
-                    Como estudiante de Desarrollo de Aplicaciones Web (DAW,
-                    FPII), complemento mi formación técnica con una sólida
-                    trayectoria como contable administrativo, donde he
-                    desarrollado una gran capacidad analítica, atención al
-                    detalle y gestión eficiente de procesos. Mi objetivo es
-                    seguir creciendo profesionalmente y aportar valor mediante
-                    la mejora de procesos y la participación en proyectos donde
-                    la tecnología y la gestión se integren para ofrecer
-                    resultados fiables, eficientes y alineados con las
-                    necesidades de la organización.
-                </p>
-            </header>
-
-            <section>
-                <h2>FORMACIÓN</h2>
-
-                <article>
-                    <h3>
-                        Técnico en Desarrollo de Aplicaciones Web (cursandos)
-                    </h3>
-                </article>
-
-                <article>
-                    <h3>Consultor Funcional SAP-CO</h3>
-                    <p>ALTIM Formación – Getafe (01/2024 - 04/2024)</p>
-                </article>
-
-                <article>
-                    <h3>Consultor Funcional SAP-FI</h3>
-                    <p>
-                        Escuela de Negocios La Salle – Madrid (03/2015 -
-                        12/2015)
-                    </p>
-                    <p></p>
-                </article>
-
-                <article>
-                    <h3>Técnico Superior en Administración y Finanzas</h3>
-                    <p>IES El Lago- Madrid (2007-2009)</p>
-                    <p></p>
-                </article>
-            </section>
-            <section>
-                <h2>HISTORIAL LABORAL</h2>
-                <article>
-                    <h3>RESPONSABLE DE ADMINISTRACIÓN Y CONTABILIDAD</h3>
-                    <p><strong>NewPoint IT Consulting, SL.(2012-2024)</strong></p>
-                    <ul>
-                        <li>
-                            Verificación, asignación y contabilización de
-                            transacciones en libros y sistemas informáticos.
-                        </li>
-                        <li>
-                            Gestión de cuentas por cobrar y por pagar,
-                            seguimiento de vencimientos.
-                        </li>
-                        <li>
-                            Conciliación bancaria y control de saldos en cuentas
-                            corrientes.
-                        </li>
-                        <li>
-                            Gestión de créditos y financiamiento, negociación
-                            con entidades bancarias.
-                        </li>
-                        <li>
-                            Preparación y presentación de informes de gestión y
-                            resultados a la dirección.
-                        </li>
-                        <li>
-                            Coordinación de cierres contables mensuales y
-                            anuales.
-                        </li>
-                        <li>
-                            Gestión de nóminas, liquidación de sueldos y cargas
-                            sociales
-                        </li>
-                    </ul>
-                </article>
-
-                <article>
-                    <h3>AUXILIAR ADMINISTRATIVO</h3>
-                    <p><strong>CAPELO & GASPA ASESORES(2009-2012)</strong></p>
-                    <ul>
-                        <li>
-                            Atención a las consultas de clientes a través de las
-                            diferentes herramientas de comunicación.
-                        </li>
-                        <li>
-                            Redacción de correos, correspondencia y
-                            comunicaciones exteriores.
-                        </li>
-                        <li>
-                            Recepción y registro de facturas y documentación
-                            contable
-                        </li>
-                        <li>
-                            Registro de información y actualización del archivo.
-                        </li>
-                        <li>
-                            Organización de documentos físicos y digitales para
-                            su fácil acceso y actualización
-                        </li>
-                        <li>
-                            Participación en reuniones y visitas a clientes
-                            cuando sea necesario.
-                        </li>
-                        <li>
-                            Gestión de contratos, nóminas y seguros sociales de
-                            empleados.
-                        </li>
-                    </ul>
-                </article>
-            </section>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 mt-10 mb-10 p-6">
+        <main class="">
+            <HeaderResumen />
+            <Estudios />
+            <ExperienciasLaborales />
         </main>
-        <aside class = "cv__aside">
-            <section>
-                <img src="" alt="Foto Amanda" />
+
+        <aside class="bg-rose-50 p-6 rounded-xl space-y-6">
+            <section class="mb-5 mt-5 ml-33">
+                <img
+                    src="/img/imgCV.jpeg"
+                    alt="Foto Amanda"
+                    class="w-36 h-36 rounded-full object-cover shadow"
+                />
             </section>
-            <section>
-                <h2><strong>Contacto</strong></h2>
-                <p><i class="bx bx-phone" />667030022</p>
-                <p>amandacruzrobalino@gmail.com</p>
-            </section>
-            <hr>
-            <section>
-                <h2>CONOCIMIENTOS TÉCNICOS</h2>
-                <ul>
-                    <li>HTML5, CSS3, JavaScript (bases)</li>
-                    <li>PHP (bases), MySQL</li>
-                    <li>Excel avanzado</li>
-                    <li>A3ERP, SAGE</li>
-                    <li>SAGE (Contaplus, Nominaplus)</li>
-                </ul>
-            </section>
-            <hr>
-            <section>
-                <h2>COMPETENCIAS PERSONALES</h2>
-                <ul>
-                    <li>Comunicación efectiva y habilidades interpersonales</li>
-                    <li>Proactividad e iniciativa</li>
-                    <li>Capacidad de análisis y resolución de problemas</li>
-                    <li>Organización y gestión eficiente del tiempo</li>
-                    <li>Orientación al cliente</li>
-                    <li>Persuasión y negociación</li>
-                </ul>
-            </section>
-            <hr>
-            <section>
-                <h2>INFORMACIÓN ADICIONAL</h2>
-                <ul>
-                    <li>Permiso de conducir tipo B</li>
-                    <li>Vehículo propio</li>
-                </ul>
-            </section>
+            <Contactos />
+            <CVSection
+                titulo="Conocimientos técnicos"
+                items={conocimientosTecnicos}
+            />
+            <CVSection titulo="Actitudes" items={actitudes} />
+            <CVSection titulo="Más información" items={masInformacion} />
         </aside>
     </div>
 </Layout>
